@@ -15,12 +15,22 @@ npm install --save math-renderer
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'math-renderer'
+import MathRenderer from 'math-renderer'
 
 class Example extends Component {
   render () {
     return (
-      <MyComponent />
+      <MathRenderer value={"Inline expression $\\int_0^\\infty x^2 dx$"} />
+    )
+  }
+}
+
+Or
+
+class Example2 extends Component {
+  render () {
+    return (
+      <MathRenderer value={"Block expression $$\\int_0^\\infty x^2 dx$$"} />
     )
   }
 }
