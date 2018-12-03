@@ -14,8 +14,8 @@ npm install --save math-renderer
 
 ```jsx
 import React, { Component } from 'react'
-
 import MathRenderer from 'math-renderer'
+import 'katex/dist/katex.min.css'
 
 class Example extends Component {
   render () {

@@ -4,7 +4,7 @@
   "description": "React component to render latex strings, based on Katex",
   "author": "bamtak",
   "license": "MIT",
-  "repository": "bamtak/math-renderer",
+  "repository": "bamtak/react-math-renderer",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
