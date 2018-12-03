@@ -31,9 +31,13 @@ export default {
     svgr(),
     babel({
       exclude: 'node_modules/**',
-      plugins: [ 'external-helpers' ]
+      plugins: ['external-helpers']
     }),
     resolve(),
-    commonjs()
+    commonjs({
+      namedExports: {
+        'node_modules/react-katex/dist/react-katex.js': ['InlineMath', 'BlockMath']
+      }
+    })
   ]
 }
