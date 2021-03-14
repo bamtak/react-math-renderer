@@ -15,6 +15,16 @@ export default class App extends Component {
         <MathRenderer>
           {'This string contains an inline expression $\\int_0^\\infty x^2 dx$'}
         </MathRenderer>
+        <p>
+          <MathRenderer>
+            {'This string is random $\\int_0^\\infty \\$30 x^2 dx $'}
+          </MathRenderer>
+        </p>
+        <p>
+          <MathRenderer>
+            {'This is a backlash $ \\ $'}
+          </MathRenderer>
+        </p>
         <h3>
           <code>{'<MathRenderer value={This string contains a block expression $$\\int_0^\\infty x^2 dx$$} />'}</code>
         </h3>

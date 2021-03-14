@@ -41,6 +41,7 @@ const processMisc = string => {
 }
 
 const latexString = (string, options) => {
+    string = string.replace(/\s\\\s/g, " \\backslash ")
     string = string.replace(/\\\$/g, dollarEscape);
     string = string.replace(/(<([^>]+)>)/gi, "");
     const regularExpression = /\$\$[\s\S]+?\$\$|\$[\s\S]+?\$/g;
@@ -122,8 +123,8 @@ export default class MathRenderer extends React.Component {
     };
 
     render() {
-        const { displayMode } = this.props;
         const value = this.props.value || getChild(this.props.children);
+        const displayMode = this.props.displayMode || value.includes("$$")
         return (
             <span
                 dangerouslySetInnerHTML={{
